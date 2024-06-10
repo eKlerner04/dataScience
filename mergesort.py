@@ -26,7 +26,6 @@ def mergeSort(list_to_sort):
         right_index = 0
         sorted_index = 0
 
-        # Füge die Elemente der linken und rechten Hälften sortiert in die sortierte Liste ein
         while left_index < len(left_half) and right_index < len(right_half):
             if left_half[left_index] <= right_half[right_index]:
                 list_to_sort[sorted_index] = left_half[left_index]
@@ -35,6 +34,7 @@ def mergeSort(list_to_sort):
                 list_to_sort[sorted_index] = right_half[right_index]
                 right_index += 1
             sorted_index += 1
+
 
         # Füge die restlichen Elemente der linken und rechten Hälften hinzu
         while left_index < len(left_half):
